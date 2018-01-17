@@ -1,0 +1,39 @@
+html, body {
+  background-color: black;
+  margin: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 400px 200px 200px;
+  grid-gap: 10px;
+}
+
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container > div:nth-child(1n) {
+      /* background-color: black; */
+      color: white;
+}
+
+.container > div:nth-child(2n) {
+      background-color: blue;
+      color: red;
+}
+
+.container > div:nth-child(3n) {
+      background-color: red;
+      color: yellow;
+}
+
+#title {
+      background-image: url("../images/dan-paul-97267.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      text-transform: uppercase;
+}
