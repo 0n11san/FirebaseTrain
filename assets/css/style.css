@@ -6,7 +6,7 @@ html, body {
 .container {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 400px 200px 200px;
+  grid-template-rows: 400px auto auto;
   grid-gap: 10px;
 }
 
@@ -15,6 +15,9 @@ html, body {
     justify-content: center;
     align-items: center;
 }
+
+/* QUESTION: why are subsequent elements in the "nth" format effected by previous elements' CSS styles? (lGoogle / Stackoverflow this) */
+
 
 .container > div:nth-child(1n) {
       /* background-color: black; */
@@ -31,10 +34,31 @@ html, body {
       color: yellow;
 }
 
+.form-group {
+  margin: 5px;
+}
+
 #title {
-      background-image: url("../images/dan-paul-97267.jpg");
+      background-image: url("https://raw.githubusercontent.com/0n11san/FirebaseTrain/master/assets/images/dan-paul-97267.jpg");
       background-size: cover;
       background-repeat: no-repeat;
       text-transform: uppercase;
       font-size: 5vw;
 }
+
+#currentTrainSchedule {
+     display: flex;
+     flex-direction: column;
+     padding: 20px;
+     font-size: 1vw;
+}
+
+#addTrain {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      text-align: center;
+      font-size: 1vw;
+}
+
+/* note: need to mess around w/ "font-size: #vw;" above as relative sizing looks too small on mobile IMO (at 1vw) and too big if I increase (to 2 or 3 vm) */
